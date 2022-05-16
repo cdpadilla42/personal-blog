@@ -1,0 +1,45 @@
+:root {
+  --black: #292f36;
+  --blue: #4ecdc4;
+  --white: #f7fff7;
+  --red: #ff6b6b;
+  --yellow: #ffe66d;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+a {
+  color: var(--blue);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--yellow);
+}
+
+.body__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    'header header'
+    'sidebar main';
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+nav {
+  grid-area: sidebar;
+}
